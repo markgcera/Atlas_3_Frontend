@@ -1,0 +1,54 @@
+# Node.js files
+node_modules/
+
+# Vite
+/dist/
+/.temp/
+/build/
+dist-ssr
+*.local
+
+# React Query
+/.cache/
+react-query.dev.js
+
+# Mock Service Worker
+/msw.js
+/msw-interceptors/
+
+# IDE files
+.vscode/
+.idea/
+!.vscode/extensions.json
+
+# Editor directories and files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore .env.local file
+.env.local
+
+# Ignore .env.development.local file
+.env.development.local
+
+# Ignore .env.test.local file
+.env.test.local
+
+# Ignore .env.production.local file
+.env.production.local
