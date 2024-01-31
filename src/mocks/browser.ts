@@ -5,7 +5,9 @@ import { http, HttpResponse } from "msw"
 
 const handlers = [
     http.get('/resource', () => {
-        return HttpResponse.text("Hello World!")
+        return HttpResponse.json({
+            result: "Hello World!"
+        })
     })
 ]
 
