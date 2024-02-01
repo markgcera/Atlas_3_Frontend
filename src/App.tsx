@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/img/react.svg'
 import viteLogo from '/vite.svg'
 import {useQuery} from "@tanstack/react-query";
-import resolvePath from "./api/fetch.ts";
+import resolveURL from "./api/fetch.ts";
 import './assets/css/App.css'
 
 function App() {
@@ -10,16 +10,16 @@ function App() {
 
   const { isPending, data } = useQuery({
     queryKey: ['resourceData'],
-    queryFn: () => fetch(resolvePath('/resource')).then((res) => res.json())
+    queryFn: () => fetch(resolveURL('/resource')).then((res) => res.json())
   })
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>

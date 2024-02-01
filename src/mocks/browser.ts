@@ -2,9 +2,11 @@
 
 import { setupWorker } from "msw/browser"
 import { http, HttpResponse } from "msw"
+import resolveURL from "../api/fetch.ts";
+
 
 const handlers = [
-    http.get('/resource', () => {
+    http.get(resolveURL('/resource'), () => {
         return HttpResponse.json({
             result: "Hello World!"
         })
