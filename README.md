@@ -14,7 +14,12 @@ This project was set up with NodeJS v20.11.0 LTS with yarn.
     ```shell
     yarn
     ```
-3. Run the development server
+3. Create a file `.env.development.local` in root folder with the following information
+   ```text
+   VITE_IGNORE_MSW=false
+   ```
+   If you would like to ignore mock service worker, set it to `true`.
+4. Run the development server
     ```shell
     yarn dev
     ```
