@@ -25,6 +25,4 @@ jobs:
         run: yarn
 
       - name: Run Vitest
-        run: | 
-          yarn ci
-          yarn vitest
+        run: yarn vitest
