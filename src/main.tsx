@@ -12,7 +12,7 @@ async function enableMocking() {
     return
   }
 
-  const { worker } = await import('./mocks/browser.ts')
+  const { worker } = await import('./mocks/worker')
 
   return worker.start()
 }
