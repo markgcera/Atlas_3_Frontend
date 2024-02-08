@@ -19,7 +19,8 @@ This project was set up with NodeJS v20.11.0 LTS with yarn.
    VITE_IGNORE_MSW=false
    ```
    If you would like to ignore mock service worker, set it to `true`.
-4. Run the development server
+4. Create another file `.env.test.local` in root folder with same content as above
+5. Run the development server
     ```shell
     yarn dev
     ```
