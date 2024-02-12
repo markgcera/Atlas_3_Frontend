@@ -8,11 +8,11 @@ import './assets/css/index.css'
 const queryClient = new QueryClient()
 
 async function enableMocking() {
-  if (process.env.NODE_ENV !== 'development') {
+  if (!import.meta.env.DEV || import.meta.env.VITE_IGNORE_MSW.toLowerCase() === "true") {
     return
   }
 
-  const { worker } = await import('./mocks/browser.ts')
+  const { worker } = await import('./mocks/worker')
 
   return worker.start()
 }
