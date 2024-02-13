@@ -2,6 +2,7 @@ import {beforeEach, describe, expect, test } from "vitest"
 import {render, screen} from "@testing-library/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import App from "../src/App"
+import React from "react"
 
 const queryClient = new QueryClient()
 
