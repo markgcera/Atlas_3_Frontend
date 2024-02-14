@@ -1,0 +1,78 @@
+/* @media (min-width: 768px) {
+    header {
+      display: none;
+    }
+  } */
+
+.overallHeader {
+    display: flex;
+    justify-content: space-between; 
+    background-color: #0C1747; 
+    align-items: center;
+    overflow: hidden; 
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    font-family: 'DM Sans', sans-serif;
+    height: 100px;
+}
+
+  
+.overallHeader div a {
+    display: block;
+    color: white; 
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 30px;
+}
+
+
+.personLogo {
+    max-width: 54.95px;
+    height: auto;
+    padding-right: 44px;
+}
+
+.fintechLogo{
+    max-width: 146px;
+    height: auto;
+    padding-left: 20px;
+}
+
+.closeLogo{
+    padding-right: 26px;
+    max-width: 44px;
+}
+.sidebar {
+    position: fixed; 
+    top: 100px; 
+    background-color: #0C1747;
+    display: block;
+    z-index: 1000; 
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.sidebar div a {
+    display: block;
+    color: white; 
+    text-align: left;
+    text-decoration: none;
+    align-items: center;
+    font-size: 30px;
+    padding: 10px;
+    padding-left: 44px;
+    font-weight: 500;
+}
+
+.sidebar .Link:hover {
+    color: #F9A72B;
+  }
+  
+
+  
+  
+  
