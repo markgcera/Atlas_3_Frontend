@@ -3,6 +3,10 @@ import reactLogo from './assets/img/react.svg'
 import viteLogo from '/vite.svg'
 import {useQuery} from "@tanstack/react-query";
 import resolveURL from "./api/fetch.ts";
+
+import NavBar from "./components/NavBar.tsx";
+import NavBarMobile from "./components/NavBarMobile.tsx";
+
 import './assets/css/App.css'
 
 function App() {
@@ -15,6 +19,8 @@ function App() {
 
   return (
     <>
+      <NavBar/>
+      <NavBarMobile/>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
