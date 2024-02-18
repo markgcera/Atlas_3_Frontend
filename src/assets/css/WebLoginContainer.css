@@ -1,0 +1,22 @@
+/* WebLoginContainer.css */
+.web-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Example to fill the screen */
+  background: linear-gradient(180deg, #0C1747 0%, rgba(37, 60, 92, 0.62) 100%);
+  border: 1px black solid;
+  }
+  
+  /* For desktops */
+@media (min-width: 1025px) {
+  /* styles for screens larger than 1024px */
+}
+  .login-form {
+    width: 100%; /* Full width on mobile */
+    max-width: 1280px; /* But not too wide */
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    /* Add more styling as needed */
+  }
