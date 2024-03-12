@@ -1,10 +1,10 @@
-import resolveURL, { apiURL } from "./fetch";
+import resolveURL from "./fetch";
 
-const BASE_URL = resolveURL(apiURL);
-const LOGIN_URL = `${BASE_URL}/auth/login`;
-const LOGOUT_URL = `${BASE_URL}/auth/logout`;
+const LOGIN_URL = resolveURL('/auth/login');
+const LOGOUT_URL = resolveURL('/auth/logout');
+const GET_CSRF_URL = resolveURL('/auth/csrf');
 
-export const signIn = async (username: string, password: string): Promise<any> => {
+export const signIn = async (username: string, password: string) => {
   const response = await fetch(LOGIN_URL, {
     method: 'POST',
     headers: {
@@ -45,7 +45,7 @@ export const signOut = async (): Promise<Response> => {
 };
 
 export const getCSRF = async (): Promise<Response> => {
-  const response = await fetch(BASE_URL, {
+  const response = await fetch(GET_CSRF_URL, {
     method: "POST",
     credentials: "include",
     headers: {
