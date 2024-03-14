@@ -6,7 +6,6 @@ import resolveURL from "./api/fetch.ts";
 import { BrowserRouter } from "react-router-dom";
 
 import NavBar from "./components/NavBar.tsx";
-import NavBarMobile from "./components/NavBarMobile.tsx";
 
 // import "./assets/css/App.css";
 
@@ -22,7 +21,6 @@ function App() {
     <BrowserRouter>
       <>
         <NavBar />
-        {/* <NavBarMobile /> */}
         <p>Hello World!</p>
 
         {/* <div>
