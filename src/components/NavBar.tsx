@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import "../assets/css/NavBar.css";
+import styles from "../assets/css/NavBar.module.css";
 import personLogo from "../assets/img/person_logo.png";
 import fintechLogo from "../assets/img/fintech_logo.png";
 
@@ -34,39 +34,43 @@ function Navbar(): JSX.Element {
 
   return (
     <header>
-      <div className="overallHeader" ref={overallHeaderRef}>
+      <div className={styles.overallHeader} ref={overallHeaderRef}>
         <div>
           <a href="/">
-            <img src={fintechLogo} alt="fintech Logo" className="fintechLogo" />
+            <img
+              src={fintechLogo}
+              alt="fintech Logo"
+              className={styles.fintechLogo}
+            />
           </a>
         </div>
         <div>
-          <Link to="/announcements" className="Link">
+          <Link to="/announcements" className={styles.Link}>
             Announcements
           </Link>
         </div>
         <div>
-          <Link to="/members" className="Link">
+          <Link to="/members" className={styles.Link}>
             Members
           </Link>
         </div>
         <div>
-          <Link to="/events" className="Link">
+          <Link to="/events" className={styles.Link}>
             Events
           </Link>
         </div>
         <div>
-          <Link to="/tasks" className="Link">
+          <Link to="/tasks" className={styles.Link}>
             Tasks
           </Link>
         </div>
         <div>
-          <Link to="/" className="Link">
+          <Link to="/" className={styles.Link}>
             Attendance
           </Link>
         </div>
         <div>
-          <Link to="/recruitment" className="Link">
+          <Link to="/recruitment" className={styles.Link}>
             Recruitment
           </Link>
         </div>
@@ -74,15 +78,15 @@ function Navbar(): JSX.Element {
           <img
             src={personLogo}
             alt="Person Logo"
-            className="personLogo"
+            className={styles.personLogo}
             onClick={toggleProfileOptions}
           />
           {showProfileOptions && (
-            <div className="profileOptions">
-              <div className="profileOption">
+            <div className={styles.profileOptions}>
+              <div className={styles.profileOption}>
                 <p>Profile</p>
               </div>
-              <div className="signOutOption">
+              <div className={styles.signOutOption}>
                 <p>Sign Out</p>
               </div>
             </div>
