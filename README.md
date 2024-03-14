@@ -5,20 +5,16 @@ This template provides a minimal setup to get React working in Vite with HMR and
 ## Setup Guide
 
 This project was set up with NodeJS v20.11.0 LTS with yarn.
-
-1. Change directory to
-    ```shell
-    cd atlas-3-frontend
-    ```
-2. Install packages
+1. Install packages
     ```shell
     yarn
     ```
-3. Create a file `.env.development.local` in root folder with the following information
+2. Create a file `.env.development.local` in root folder with the following information
    ```text
    VITE_IGNORE_MSW=false
    ```
    If you would like to ignore mock service worker, set it to `true`.
+3. Create another file `.env.test.local` in root folder with same content as above
 4. Run the development server
     ```shell
     yarn dev
