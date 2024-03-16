@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+
 import viteLogo from "/vite.svg";
 import reactLogo from "/react.svg";
-import "css/testpage.css"
 import resolveURL from "@/api/fetch.ts";
 
 
