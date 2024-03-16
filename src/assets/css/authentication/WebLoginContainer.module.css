@@ -1,5 +1,5 @@
-/* WebLoginContainer.css */
-.web-login-container {
+/* WebLoginContainer.module.css */
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@
 @media (min-width: 1025px) {
   /* styles for screens larger than 1024px */
 }
-  .login-form {
+  .loginForm {
     width: 100%; /* Full width on mobile */
     max-width: 1280px; /* But not too wide */
     padding: 20px;
