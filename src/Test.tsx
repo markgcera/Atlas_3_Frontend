@@ -3,7 +3,7 @@ import {useQuery} from "@tanstack/react-query";
 import resolveURL from "./api/fetch.ts";
 import viteLogo from "*.svg";
 import reactLogo from "./assets/img/react.svg";
-import './assets/css/App.css'
+import './assets/css/Test.css'
 
 const Test = () => {
 
