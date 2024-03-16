@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/img/react.svg'
-import viteLogo from '/vite.svg'
-import {useQuery} from "@tanstack/react-query";
-import resolveURL from "./api/fetch.ts";
-import './assets/css/App.css'
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import viteLogo from "/vite.svg";
+import reactLogo from "/react.svg";
+import "css/testpage.css"
+import resolveURL from "@/api/fetch.ts";
 
-function App() {
+
+const getResourceOptions = {
+  queryKey: ['resourceData'],
+  queryFn: () => fetch(resolveURL('/resource')).then((res) => res.json())
+}
+
+
+function TestPage() {
   const [count, setCount] = useState(0)
 
-  const { isPending, data } = useQuery({
-    queryKey: ['resourceData'],
-    queryFn: () => fetch(resolveURL('/resource')).then((res) => res.json())
-  })
+  const { isPending, data } = useQuery(getResourceOptions)
 
   return (
     <>
@@ -28,9 +32,6 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
@@ -39,4 +40,4 @@ function App() {
   )
 }
 
-export default App
+export default TestPage
