@@ -1,11 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App.tsx";
+import { QueryClient } from "@tanstack/react-query";
+import TestPage from "./shared/TestPage.tsx";
+// import { loader } from "./shared/loader.tsx";
+
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 1000 * 10,
+    },
+  },
+})
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: App
+    Component: TestPage,
+    // loader: loader(queryClient)
   }
 ])
 

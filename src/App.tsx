@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/img/react.svg'
+import reactLogo from '../public/react.svg'
 import viteLogo from '/vite.svg'
 import {useQuery} from "@tanstack/react-query";
 import resolveURL from "./api/fetch.ts";

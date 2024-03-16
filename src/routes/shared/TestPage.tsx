@@ -1,18 +1,14 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import resolveURL from "../../api/fetch.ts";
-import viteLogo from "*.svg";
-import reactLogo from "../../assets/img/react.svg";
-
-
+import viteLogo from "/vite.svg";
+import reactLogo from "/react.svg";
+import { getResourceOptions } from "./loader.tsx";
+import "css/App.css"
 
 function TestPage() {
   const [count, setCount] = useState(0)
 
-  const { isPending, data } = useQuery({
-    queryKey: ['resourceData'],
-    queryFn: () => fetch(resolveURL('/resource')).then((res) => res.json())
-  })
+  const { isPending, data } = useQuery(getResourceOptions)
 
   return (
     <>
