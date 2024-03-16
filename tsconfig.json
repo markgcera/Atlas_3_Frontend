@@ -23,8 +23,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "css/*": ["./src/css/*"],
-      "img/*": ["./src/img/*"]
+      "css/*": ["./src/assets/css/*"],
+      "img/*": ["./src/assets/img/*"],
+      "components/*": ["./src/components/*"],
+      "routes/*": ["./src/routes/*"]
     }
   },
   "include": ["src"],
