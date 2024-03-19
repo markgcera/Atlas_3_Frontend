@@ -3,11 +3,10 @@
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react()],
   test: {
     globals: true,
     environment: "jsdom",
@@ -18,7 +17,9 @@ export default defineConfig({
       { find: "@", replacement: "/src" },
       { find: "assets", replacement: "/src/assets" },
       { find: "css", replacement: "/src/assets/css" },
-      { find: "img", replacement: "/src/assets/img" }
+      { find: "img", replacement: "/src/assets/img" },
+      { find: "components", replacement: "/src/components" },
+      { find: "routes", replacement: "/src/routes" }
     ]
   }
 })
