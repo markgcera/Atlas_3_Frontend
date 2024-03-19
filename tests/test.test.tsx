@@ -1,7 +1,7 @@
 import {beforeEach, describe, expect, test } from "vitest"
 import {render, screen} from "@testing-library/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import TestPage from "@/routes/shared/TestPage"
+import TestPage from "routes/shared/TestPage.tsx"
 
 const queryClient = new QueryClient()
 
