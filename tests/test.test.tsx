@@ -1,15 +1,14 @@
 import {beforeEach, describe, expect, test } from "vitest"
 import {render, screen} from "@testing-library/react"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import App from "../src/App"
-import React from "react"
+import TestPage from "routes/shared/TestPage.tsx"
 
 const queryClient = new QueryClient()
 
-describe("Vitest Test", () => {
+describe("Test Page", () => {
 
   beforeEach(() => {
-    render(<QueryClientProvider client={queryClient}><App></App></QueryClientProvider>)
+    render(<QueryClientProvider client={queryClient}><TestPage></TestPage></QueryClientProvider>)
   })
 
   test("Should show Hello World!", async () => {
